@@ -1,0 +1,43 @@
+﻿Question,Answer
+What is Playwright?,"Playwright is an open-source browser automation framework that supports multiple languages like JavaScript, TypeScript, Python, C#, and Java for end-to-end testing."
+What are the main features of Playwright?,"Playwright supports cross-browser testing, auto-waiting, headless mode, multiple language support, and testing in parallel."
+Which browsers are supported by Playwright?,"Playwright supports Chrome, Firefox, and WebKit (Safari) for cross-browser testing."
+How does Playwright differ from Selenium?,"Playwright supports headless browsers natively, allows testing in multiple languages, and auto-waits for elements, while Selenium is more established and has a broader ecosystem."
+What are selectors in Playwright?,"Selectors in Playwright are used to locate elements in a web page, similar to CSS selectors, XPath, or text-based selectors."
+What is auto-waiting in Playwright?,"Auto-waiting is a feature in Playwright where it automatically waits for elements to be ready (e.g., visible, clickable) before performing actions on them."
+How can you launch a browser in Playwright?,You can launch a browser using playwright.chromium.launch() in JavaScript or similar methods for other browsers.
+How do you run tests in headless mode in Playwright?,By setting the headless option to true during browser launch: `await playwright.chromium.launch({ headless: true });`.
+What are context and pages in Playwright?,"A browser context in Playwright is an isolated session within a browser, and a page represents a single tab or window in a browser."
+How do you handle authentication in Playwright?,"You can handle authentication using browser contexts and passing credentials with browser.newContext({ httpCredentials: {username, password}})."
+How do you take a screenshot in Playwright?,You can take screenshots using the screenshot method: `await page.screenshot({ path: 'screenshot.png' });`.
+How do you record a trace in Playwright?,"You can enable tracing to capture execution logs, screenshots, and network activity using `trace.start()` and `trace.stop()`."
+What is Playwright Inspector?,Playwright Inspector is a GUI tool used for debugging and inspecting selectors while running Playwright scripts interactively.
+How can you handle multiple tabs in Playwright?,You can handle multiple tabs using the `browserContext.newPage()` method and switch between pages by tracking the page instances.
+What is the Playwright test runner?,"Playwright test runner is an integrated test runner for running Playwright tests, which includes features like parallel testing, fixtures, and custom reporters."
+How can you emulate mobile devices in Playwright?,You can emulate mobile devices using the browser context by setting the device descriptor with `browser.newContext({ ...devices['iPhone 12'] })`.
+How do you manage cookies in Playwright?,You can manage cookies using the `context.cookies()` and `context.addCookies()` methods for getting and setting cookies.
+What is the role of fixtures in Playwright tests?,"Fixtures in Playwright are used to set up a test environment, allowing you to initialize browser contexts, pages, or other resources before a test starts."
+How do you perform a drag-and-drop operation in Playwright?,"Playwright supports drag-and-drop actions using the `page.dragAndDrop(source, target)` method."
+What is the role of waitForSelector in Playwright?,The `waitForSelector()` method is used to wait for a specific element to appear or become visible on the page.
+How do you handle file uploads in Playwright?,You can handle file uploads by setting the file path to an input element using `input.setInputFiles('path/to/file')`.
+How do you handle file downloads in Playwright?,Playwright provides `page.on('download')` to handle file downloads and access file download URLs.
+How do you simulate network conditions in Playwright?,"Playwright allows simulating network conditions like offline mode, or throttling using the `page.route()` method and `context.grantPermissions()`."
+How do you capture network requests in Playwright?,You can capture network requests using the `page.on('request')` event to intercept HTTP requests.
+What is the purpose of Playwright's BrowserContext?,BrowserContext in Playwright allows creating isolated browser sessions that can be used to test multiple scenarios independently.
+How do you test in parallel using Playwright?,"Playwright test runner supports parallel execution by default, using multiple workers to run tests concurrently."
+How do you assert the page title in Playwright?,You can assert the page title using `expect(page).toHaveTitle('title')` in the Playwright test runner.
+What is the role of intercepting requests in Playwright?,Intercepting requests in Playwright allows you to mock or modify HTTP requests/responses using the `page.route()` method.
+How do you run tests on a mobile device using Playwright?,"You can emulate mobile devices using the built-in device descriptors and browser context in Playwright, such as `devices['iPhone 12']`."
+What are selectors in Playwright?,"Selectors in Playwright allow you to locate and interact with elements in a web page, including text, CSS, XPath, and custom selectors."
+How do you handle authentication tokens in Playwright?,"Authentication tokens can be handled using the `storageState` option in browser contexts, allowing you to reuse login sessions across tests."
+How do you mock API responses in Playwright?,You can mock API responses using `page.route()` to intercept network requests and provide mocked responses.
+How do you retry failed tests in Playwright?,You can enable retries in Playwright test runner by setting the retry option in the config file.
+How can you execute JavaScript code within a Playwright test?,You can execute JavaScript code on a page using the `page.evaluate()` method.
+How do you automate PDF generation in Playwright?,"You can generate PDFs by using the `page.pdf()` method, which allows saving web pages as PDF documents."
+How do you capture screenshots in Playwright?,"You can capture screenshots using `page.screenshot()` method, specifying file path and options like full page capture."
+What is Playwright's role in CI/CD?,"Playwright integrates seamlessly with CI/CD tools like Jenkins, GitHub Actions, and CircleCI to automate testing pipelines."
+What are Playwright's built-in reporters?,"Playwright has built-in reporters like list, dot, and JSON. You can also create custom reporters for detailed logging."
+How do you debug Playwright tests?,"Playwright provides debugging options like `debug` command, `playwright codegen`, and Playwright Inspector for interactive debugging."
+How do you test offline behavior in Playwright?,You can simulate offline behavior by disabling network access using `page.context().setOffline(true)`.
+How do you run Playwright tests in headless mode?,You can run tests in headless mode by passing `headless: true` when launching the browser.
+What is the Playwright test configuration file?,"The Playwright test configuration file, `playwright.config.js`, is used to define settings like browsers, base URL, retries, timeouts."

@@ -1,0 +1,41 @@
+﻿Question,Answer
+What is Selenium?,"Selenium is an open-source suite of tools for automating web browsers across different platforms. It supports multiple programming languages like Java, Python, C#, and more."
+What are the different components of Selenium?,"Selenium consists of: Selenium WebDriver, Selenium IDE, Selenium Grid, Selenium RC (now deprecated)."
+What is Selenium WebDriver?,WebDriver is a web automation framework that allows execution of web-based tests across different browsers. It interacts directly with the browser without needing any intermediary software.
+How do you launch a browser in Selenium WebDriver?,Example in Java: WebDriver driver = new ChromeDriver(); driver.get('https://example.com');
+What are the different locators in Selenium WebDriver?,"Selenium provides eight locators: ID, Name, ClassName, TagName, LinkText, PartialLinkText, XPath, CSS Selector."
+What is XPath and its types?,"XPath is used to locate elements in the XML document or HTML. There are two types: Absolute XPath, Relative XPath."
+Explain the difference between driver.findElement() and driver.findElements().,"findElement() returns a single WebElement, while findElements() returns a list of WebElements. If no matching elements are found, findElement() throws an exception, whereas findElements() returns an empty list."
+How do you handle dropdowns in Selenium?,Using the Select class in WebDriver: Select select = new Select(driver.findElement(By.id('dropdown'))); select.selectByVisibleText('Option');
+How do you handle frames in Selenium WebDriver?,You can switch to a frame using: driver.switchTo().frame('frameName');
+How can you switch back to the parent frame?,Use: driver.switchTo().parentFrame();
+What is implicit wait in Selenium?,"Implicit wait tells the WebDriver to wait for a certain amount of time before throwing a NoSuchElementException. driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);"
+What is explicit wait in Selenium?,"Explicit wait makes WebDriver wait for a specific condition to occur before continuing. WebDriverWait wait = new WebDriverWait(driver, 20); wait.until(ExpectedConditions.elementToBeClickable(By.id('submit')));"
+What is Fluent Wait in Selenium?,Fluent wait defines a maximum timeout and polling frequency and ignores specific exceptions during polling.
+How can you handle JavaScript alerts in Selenium?,You can handle alerts using Alert interface: Alert alert = driver.switchTo().alert(); alert.accept();
+How do you perform mouse hover action in Selenium?,Using the Actions class: Actions actions = new Actions(driver); WebElement element = driver.findElement(By.id('menu')); actions.moveToElement(element).perform();
+What is the difference between driver.close() and driver.quit()?,"driver.close() closes the current window, while driver.quit() closes all browser windows opened by the WebDriver."
+How can you upload a file in Selenium WebDriver?,Use sendKeys() method: WebElement upload = driver.findElement(By.id('uploadfile')); upload.sendKeys('path/to/file');
+What is the Page Object Model (POM)?,POM is a design pattern in Selenium that creates an object repository for web elements. It reduces code duplication and enhances test maintenance.
+How do you handle multiple windows in Selenium?,Use getWindowHandles() and switchTo().window() methods.
+What are headless browsers?,Headless browsers are browsers without a graphical user interface. Examples include PhantomJS and Headless Chrome. They are used for faster test execution.
+How do you execute JavaScript in Selenium?,Using the JavascriptExecutor interface: JavascriptExecutor js = (JavascriptExecutor) driver; js.executeScript('alert(Hello World);');
+How do you handle SSL certificates in Selenium WebDriver?,You can accept SSL certificates by setting desired capabilities.
+How do you scroll a webpage in Selenium WebDriver?,You can use JavascriptExecutor to scroll.
+How can you perform drag and drop in Selenium?,"Use Actions class: Actions action = new Actions(driver); WebElement source = driver.findElement(By.id('draggable')); WebElement target = driver.findElement(By.id('droppable')); action.dragAndDrop(source, target).perform();"
+What are the advantages of Selenium WebDriver?,"Key advantages include: Support for multiple browsers, No need for browser plugins, Cross-platform support, Integration with CI/CD tools like Jenkins."
+What is the StaleElementReferenceException in Selenium?,"StaleElementReferenceException occurs when an element that was found is no longer attached to the DOM (e.g., after a page refresh or element change)."
+How do you perform right-click action in Selenium?,Use Actions class: Actions actions = new Actions(driver); actions.contextClick(element).perform();
+What is the role of DesiredCapabilities in Selenium?,"DesiredCapabilities class is used to define properties for browsers, like browser name, version, and platform."
+How can you handle authentication pop-ups in Selenium?,You can handle authentication pop-ups using the Alert interface or by passing credentials directly in the URL.
+What are the different types of waits available in Selenium WebDriver?,"Selenium WebDriver provides three types of waits: Implicit Wait, Explicit Wait (WebDriverWait), and Fluent Wait."
+How do you handle browser cookies in Selenium?,"Cookies can be managed using the driver.manage().getCookies(), driver.manage().addCookie(), and driver.manage().deleteCookie() methods."
+What is the difference between sleep() and wait() in Selenium?,"sleep() is a static wait provided by Java, while wait() is used for handling synchronization in Selenium."
+What is TestNG’s DataProvider annotation used for?,DataProvider is used to pass different sets of data to a test method in TestNG.
+How do you perform scrolling to a specific element in Selenium?,You can use JavascriptExecutor to scroll to a specific element.
+How can you perform a double-click in Selenium?,Using the Actions class: Actions actions = new Actions(driver); WebElement element = driver.findElement(By.id('element')); actions.doubleClick(element).perform();
+How can you handle drag and drop actions across frames?,"Switch to the frame containing the source element, then use Actions class to perform drag and drop."
+How do you refresh a page in Selenium?,You can refresh the page using driver.navigate().refresh() or driver.get(driver.getCurrentUrl());
+How do you navigate between browser tabs in Selenium?,"Use getWindowHandles() to get all open window/tab handles, and switch between them using driver.switchTo().window(handle)."
+How do you delete all cookies in Selenium?,Use driver.manage().deleteAllCookies() to delete all cookies from the current browsing session.
+What is the use of JavascriptExecutor in Selenium?,JavascriptExecutor is used to execute JavaScript code in the context of the currently selected frame or window.

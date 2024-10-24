@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selenium Interview Questions</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .question {
+            margin-bottom: 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .answer {
+            padding-left: 20px;
+            color: #555;
+            border-left: 3px solid #4caf50 ;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Java Interview Questions</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="playwright.html">Playwright</a></li>
+                <li><a href="cypress.html">Cypress</a></li>
+                <li><a href="csharp.html">C#</a></li>
+                <li><a href="selenium.html">Selenium</a></li>
+                <li><a href="api.html">API</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+    </header>
+
+    <input type="text" id="searchInput" onkeyup="searchQuestions()" placeholder="search Questions....">
+
+    <section id="questions">
+        <!--Questions and Answers will be dynamically loaded here-->
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Automation Interview Questions</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Identify the correct CSV file based on the page
+            let csvFile = '';
+
+            if (window.location.pathname.includes('selenium')) {
+                csvFile = 'Data/selenium_interview_100_questions.csv';
+            } else if (window.location.pathname.includes('playwright')) {
+                csvFile = 'Data/playwright_interview_questions.csv';
+            } else if (window.location.pathname.includes('cypress')) {
+                csvFile = 'Data/cypress_interview_questions.csv';
+            } else if(window.location.pathname.includes('APITesting')){
+                csvFile = 'Data/rest_api_interview_questions.csv';
+            }else if(window.location.pathname.includes('c#')){
+                csvFile = 'Data/csharp_interview_questions.csv';
+            }else if(window.location.pathname.includes('java')){
+                csvFile = 'Data/java_interview_questions.csv';
+            }// Add more conditions for other tools
+
+            // Fetch and parse the CSV file
+            fetch(csvFile)
+                .then(response => response.text())
+                .then(data => {
+                    Papa.parse(data, {
+                    header: true,  // Ensure we're reading header row
+                    complete: function(results) {
+                        console.log("Parsed Data:", results.data);  // Debugging log to inspect data
+                        displayQuestions(results.data);
+                    },
+                    error: function(error) {
+                        console.error("Error parsing CSV:", error);  // Log any errors
+                    }
+                });
+            });
+        });
+
+        // Parse CSV into an array of objects
+        function parseCSV(data) {
+            const rows = data.split("\n").slice(1); // Skip the header row
+            const questions = rows.map(row => {
+                const [question, answer] = row.split(",");
+                return { question, answer };
+            });
+            return questions;
+        }
+
+        // Display questions and answers
+        function displayQuestions(questions) {
+        const questionsSection = document.getElementById('questions');
+        questions.forEach((item, index) => {
+            const questionDiv = document.createElement('div');
+            questionDiv.classList.add('question');
+
+            const questionHTML = `
+                <p>${index + 1}. ${item.Question || "Question missing"}</p>
+                <div class="answer" style="display: none;">
+                    ${item.Answer || "Answer missing"}
+                </div>
+            `;
+            questionDiv.innerHTML = questionHTML;
+            questionDiv.onclick = function () {
+                const answer = this.querySelector('.answer');
+                answer.style.display = (answer.style.display === "none") ? "block" : "none";
+            };
+            questionsSection.appendChild(questionDiv);
+        });
+    }
+
+        // Search functionality (optional)
+        function searchQuestions() {
+            const input = document.getElementById("searchInput").value.toUpperCase();
+            const questions = document.querySelectorAll('.question');
+
+            questions.forEach(question => {
+                const text = question.innerText || question.textContent;
+                question.style.display = text.toUpperCase().includes(input) ? "" : "none";
+            });
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</body>
+</html>

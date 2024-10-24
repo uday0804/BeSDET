@@ -1,0 +1,41 @@
+﻿Question,Answer
+What is a REST API?,A REST API (Representational State Transfer) is an architectural style for building web services that are stateless and use HTTP methods for operations.
+What are the main HTTP methods used in REST?,"The main HTTP methods used in REST are GET, POST, PUT, DELETE, PATCH, and OPTIONS."
+What is the difference between PUT and POST?,"POST is used to create a new resource, while PUT is used to update an existing resource. PUT is idempotent, meaning multiple identical requests have the same effect."
+What is the difference between PATCH and PUT?,"PUT updates an entire resource, while PATCH updates only partial data of the resource."
+What are status codes in REST?,"Status codes are used to indicate the result of a request. Examples: 200 OK, 201 Created, 400 Bad Request, 404 Not Found, 500 Internal Server Error."
+What does it mean for a REST API to be stateless?,Being stateless means that each request from a client must contain all the necessary information for the server to fulfill the request. The server does not store client context between requests.
+What is Idempotency in REST?,"Idempotency means that making the same request multiple times will produce the same result. For example, GET, PUT, and DELETE requests should be idempotent."
+What is a resource in REST?,"In REST, a resource is any object or entity that can be accessed or manipulated via a URL. Resources can be documents, images, data objects, etc."
+How do you secure a REST API?,"REST APIs can be secured using methods like OAuth, JWT (JSON Web Tokens), API keys, HTTPS, and basic authentication."
+What is the role of content-type in REST APIs?,"The Content-Type header in REST APIs tells the server or client what the type of the data being sent is (e.g., application/json, application/xml)."
+What is HATEOAS in REST?,HATEOAS (Hypermedia as the Engine of Application State) is a constraint of REST that says the client should be able to navigate the API dynamically by following links provided by the server.
+What is the difference between SOAP and REST?,"SOAP is a protocol, while REST is an architectural style. REST is generally simpler and uses standard HTTP methods, while SOAP uses XML for messages and can be more complex."
+What are CORS and its importance in REST API?,CORS (Cross-Origin Resource Sharing) is a security feature in web browsers that prevents one domain from making requests to another unless explicitly allowed by the server.
+What is JWT in REST APIs?,"JWT (JSON Web Token) is a compact, URL-safe token that is often used for authentication and secure data transmission in REST APIs."
+How does versioning work in REST APIs?,"Versioning can be implemented in REST APIs through the URL (e.g., /v1/resource), query parameters (e.g., /resource?version=1), or headers (e.g., version: 1)."
+What is pagination in REST?,"Pagination is a way to divide large sets of data into smaller, more manageable chunks. It is typically implemented using query parameters like `page` and `limit`."
+What is a RESTful URI?,"A RESTful URI uniquely identifies a resource. It follows a standard format, such as `/users/123` to refer to the user with ID 123."
+How do you handle errors in REST APIs?,"Errors in REST APIs are usually handled using standard HTTP status codes, along with an error message or error code in the response body."
+What is an API gateway?,"An API gateway is a server that sits between the client and the API services, handling tasks like authentication, logging, rate limiting, and routing."
+What are the advantages of using REST?,"Advantages of REST include stateless communication, scalability, simplicity, ease of integration, and language/platform independence."
+What is RESTful caching?,"RESTful caching refers to the use of caching mechanisms to improve the performance of REST APIs, such as using cache headers (e.g., ETag, Cache-Control)."
+What is a 401 status code in REST?,A 401 Unauthorized status code means the request requires user authentication.
+What is the 403 Forbidden status code?,The 403 Forbidden status code indicates that the server understands the request but refuses to authorize it.
+What is the difference between 400 and 422 status codes?,"400 Bad Request means the server could not understand the request, while 422 Unprocessable Entity means the server understands the request but can't process it due to semantic errors."
+What are some best practices for designing REST APIs?,"Some best practices include using nouns for resource names, implementing proper status codes, supporting filtering, sorting, and pagination, and ensuring security through HTTPS."
+What are webhooks?,Webhooks are user-defined HTTP callbacks that are triggered by specific events on the server side. They allow real-time communication between services.
+What is Rate Limiting in REST API?,Rate limiting is a mechanism used to control the number of requests a client can make to an API within a specific timeframe.
+How do you handle large datasets in REST APIs?,"Large datasets are often handled using pagination, filtering, and sorting to allow clients to request only the data they need in manageable chunks."
+What is an idempotent operation in REST?,"An idempotent operation can be called multiple times without producing different outcomes. PUT and DELETE are idempotent, while POST is not."
+What is a resource representation in REST?,"A resource representation is the format (e.g., JSON, XML) in which a resource's data is delivered to the client."
+What is RESTful routing?,"RESTful routing refers to the convention of mapping HTTP methods (GET, POST, PUT, DELETE) to CRUD operations (Read, Create, Update, Delete) on resources."
+How do you handle authentication in REST APIs?,"Authentication in REST APIs can be handled using OAuth, Basic Authentication, API keys, or JWT tokens."
+What are the different types of authentication mechanisms for REST APIs?,"The common authentication mechanisms are Basic Authentication, OAuth, JWT, and API keys."
+How do you test a REST API?,"You can test REST APIs using tools like Postman, Curl, Swagger, or automated testing frameworks such as Mocha, Jest, or JUnit."
+What are query parameters in REST APIs?,"Query parameters are key-value pairs appended to the URL in REST requests, used for filtering, sorting, or pagination (e.g., ?page=1&limit=10)."
+What is REST API documentation?,"REST API documentation provides information about API endpoints, parameters, request and response formats, and error codes. Tools like Swagger or OpenAPI can generate API docs."
+What is Swagger in REST?,"Swagger is an open-source toolset used to design, build, document, and test REST APIs."
+What is the role of HTTP headers in REST APIs?,"HTTP headers in REST APIs convey metadata like content type, authentication tokens, caching rules, and API version."
+What is API rate limiting?,API rate limiting restricts the number of API calls a user can make within a given time frame to prevent abuse or overload.
+What is the role of API keys in securing a REST API?,API keys are used to authenticate and authorize client requests. The API key is passed in the request header to ensure that the client has permission to access the API.

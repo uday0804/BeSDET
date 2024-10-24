@@ -1,0 +1,42 @@
+﻿Question,Answer
+What is Java?,"Java is a high-level, class-based, object-oriented programming language designed to have as few implementation dependencies as possible."
+What is the JVM?,The JVM (Java Virtual Machine) is an abstract machine that enables a computer to run Java programs and programs compiled to Java bytecode.
+"What is the difference between JDK, JRE, and JVM?","JDK is the Java Development Kit, JRE is the Java Runtime Environment, and JVM is the Java Virtual Machine. JDK includes the JRE and development tools, while JRE includes the JVM to run Java applications."
+What are the main features of Java?,"Some key features of Java include platform independence, object-oriented, robust, secure, high performance, multithreading, and portability."
+What is inheritance in Java?,Inheritance is an OOP concept where one class (child/subclass) inherits properties and methods from another class (parent/superclass).
+What is polymorphism in Java?,Polymorphism allows methods to do different things based on the object that is calling them. There are two types: compile-time (method overloading) and runtime (method overriding).
+What is an interface in Java?,"An interface is a reference type in Java. It is a collection of abstract methods, which are implemented by classes."
+What is encapsulation in Java?,Encapsulation is the wrapping of data (variables) and methods into a single unit (class). It also restricts direct access to some of an object's components.
+What is abstraction in Java?,Abstraction is a process of hiding the implementation details from the user and only showing the essential features of an object.
+What is the difference between abstract class and interface?,"An abstract class can have method implementations, while an interface cannot (until Java 8). Classes can implement multiple interfaces but can only extend one abstract class."
+What is the difference between method overloading and method overriding?,Method overloading occurs when multiple methods have the same name but different parameters. Method overriding occurs when a subclass provides a specific implementation of a method declared in its superclass.
+What is the final keyword in Java?,"The `final` keyword in Java is used to restrict modification. It can be used with classes (cannot be subclassed), methods (cannot be overridden), and variables (value cannot be changed)."
+What is a static keyword in Java?,"The `static` keyword in Java is used for memory management. It can be applied to variables, methods, blocks, and nested classes. Static members belong to the class rather than to any specific instance."
+What is the difference between a constructor and a method in Java?,"A constructor is used to initialize an object, has the same name as the class, and has no return type. A method performs actions and can return values."
+What is the difference between this and super in Java?,"`this` refers to the current class instance, while `super` refers to the parent class instance."
+What is garbage collection in Java?,Garbage collection is the process by which the Java runtime reclaims memory by removing objects that are no longer in use.
+What are access modifiers in Java?,"Access modifiers in Java define the accessibility of classes, methods, and variables. Common access modifiers are public, protected, private, and default (no modifier)."
+What is a package in Java?,"A package is a namespace for organizing classes and interfaces in a logical manner, preventing naming conflicts."
+What are checked and unchecked exceptions in Java?,"Checked exceptions are exceptions that must be either caught or declared in the method (e.g., IOException). Unchecked exceptions (RuntimeException and its subclasses) do not need to be explicitly handled."
+What is multithreading in Java?,Multithreading is a feature in Java that allows concurrent execution of two or more threads for maximum CPU utilization.
+What is synchronization in Java?,"Synchronization is the ability to control the access of multiple threads to shared resources, preventing race conditions and ensuring thread safety."
+What is the difference between ArrayList and LinkedList?,"ArrayList is backed by a dynamic array, while LinkedList is backed by a doubly linked list. ArrayList has faster random access, while LinkedList is better for insertions and deletions."
+What is the difference between HashMap and HashTable?,"HashMap is not synchronized and allows null keys and values, while Hashtable is synchronized and does not allow null keys or values."
+What is the difference between String and StringBuilder in Java?,"String is immutable, meaning its value cannot be changed once created. StringBuilder is mutable, meaning it can be changed without creating a new object."
+What is a thread in Java?,A thread is the smallest unit of execution in a program. Java provides the Thread class to create and manage threads.
+What is the significance of the `volatile` keyword in Java?,"`volatile` ensures that the value of a variable is always read from main memory and not cached, ensuring visibility of changes between threads."
+What is the role of the `transient` keyword?,`transient` is used to mark variables that should not be serialized during the serialization process.
+What is reflection in Java?,"Reflection is the ability to inspect and manipulate classes, methods, and fields at runtime, allowing for dynamic code execution."
+What are lambdas in Java?,"Lambda expressions in Java (introduced in Java 8) provide a way to write anonymous functions, enabling functional programming and simplifying the use of functional interfaces."
+What is the `default` keyword in interfaces?,"The `default` keyword (introduced in Java 8) allows method implementations in interfaces, meaning classes implementing the interface can use default behavior or override it."
+What is a functional interface in Java?,"A functional interface is an interface with exactly one abstract method, often used in conjunction with lambda expressions."
+What is the Stream API in Java?,"The Stream API (introduced in Java 8) is used to process collections of objects in a functional programming style, supporting operations like filtering, mapping, and reducing."
+What is Optional in Java?,"Optional (introduced in Java 8) is a container class used to represent the absence or presence of a value, helping to avoid null pointer exceptions."
+What is a singleton class?,A singleton class is a class that allows only one instance of itself to be created and provides global access to that instance.
+What is the `finalize()` method in Java?,`finalize()` is a method called by the garbage collector before an object is removed from memory. It is generally not used in modern Java applications.
+What are enums in Java?,"Enums are special Java types used to define collections of constants, improving type safety and readability."
+What is the `assert` keyword in Java?,"The `assert` keyword is used for debugging purposes to test assumptions in code. If the assertion fails, an error is thrown."
+What is serialization in Java?,"Serialization is the process of converting an object into a byte stream, allowing it to be persisted to disk or transferred over a network."
+What is the purpose of the `try-with-resources` statement?,The `try-with-resources` statement (introduced in Java 7) automatically closes resources like files and streams after the try block is executed.
+What is the difference between process and thread in Java?,"A process is an independent execution unit, while a thread is a lightweight process that runs within a process, sharing its resources."
+What is the diamond operator in Java?,"The diamond operator (`<>`) simplifies generics by allowing the compiler to infer the type arguments, reducing boilerplate code."

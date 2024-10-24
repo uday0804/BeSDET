@@ -1,0 +1,47 @@
+﻿Question,Answer
+What is Cypress?,Cypress is a JavaScript end-to-end testing framework that is used for testing web applications.
+How does Cypress differ from Selenium?,"Cypress operates directly in the browser, providing a faster and more interactive testing experience, whereas Selenium operates externally by controlling the browser via WebDriver."
+What types of testing are supported by Cypress?,"Cypress supports end-to-end testing, integration testing, and unit testing."
+How do you install Cypress?,Cypress can be installed using npm with the command `npm install cypress --save-dev`.
+What is a fixture in Cypress?,"A fixture in Cypress is a fixed set of data located in the `fixtures` folder, which can be used for mock data during testing."
+How do you take screenshots in Cypress?,You can take screenshots using the `cy.screenshot()` command in Cypress.
+How do you capture video in Cypress?,Cypress can automatically capture videos of test runs by enabling the video configuration in `cypress.json`.
+What is the role of `cy.visit()` in Cypress?,`cy.visit()` is used to visit a web page in Cypress and navigate to the specified URL.
+What is `cy.get()` in Cypress?,`cy.get()` is used to get DOM elements based on the provided selector.
+How does Cypress handle asynchronous code?,Cypress automatically waits for commands and assertions to complete before moving to the next step in the test.
+What is a custom command in Cypress?,"A custom command is a user-defined command that extends Cypress’ core functionality, and it can be defined in `commands.js`."
+What are Cypress aliases?,"Aliases in Cypress are used to store data or elements for later use in a test, defined using the `.as()` command."
+How do you handle HTTP requests in Cypress?,Cypress allows you to handle HTTP requests using `cy.request()` to make API calls directly in a test.
+What is `cy.intercept()` used for?,`cy.intercept()` is used to intercept and stub network requests in a test.
+How do you run Cypress tests in headless mode?,Cypress tests can be run in headless mode using the command `cypress run --headless`.
+What is the role of `cy.contains()` in Cypress?,`cy.contains()` is used to find elements that contain specific text.
+How do you retry failed assertions in Cypress?,Cypress automatically retries assertions until they pass or until the timeout is reached.
+How can you handle file uploads in Cypress?,"Cypress does not support native file uploads directly, but you can simulate file upload using external libraries like `cypress-file-upload`."
+How do you perform browser actions like scroll or click in Cypress?,"Cypress provides commands like `cy.scrollTo()`, `cy.click()`, and `cy.type()` to perform browser actions."
+How do you manage cookies in Cypress?,"You can manage cookies using commands like `cy.getCookie()`, `cy.setCookie()`, and `cy.clearCookie()`."
+How do you test different viewports in Cypress?,You can test different screen sizes using `cy.viewport()` to simulate various device dimensions.
+What are Cypress test retries?,"Cypress test retries allow re-running failed tests automatically, configurable in `cypress.json` or using the `retries` option in a test."
+How do you handle authentication in Cypress?,"You can handle authentication by visiting the login page, using API requests for login, or by setting cookies or local storage directly."
+How do you handle multiple tabs or windows in Cypress?,Cypress currently does not support multiple tabs or windows directly but can handle page redirects or simulate multiple windows via stubbing.
+What is `cy.wait()` used for in Cypress?,`cy.wait()` is used to add delays or wait for an alias or network request to resolve before continuing.
+What are Cypress hooks?,"Cypress hooks are lifecycle methods like `before()`, `after()`, `beforeEach()`, and `afterEach()` used to set up preconditions or cleanups for tests."
+How do you debug Cypress tests?,You can debug Cypress tests using browser developer tools or by adding `cy.pause()` or `cy.debug()` in the test script.
+What is the `cypress.json` configuration file?,"`cypress.json` is the configuration file where you define global settings for your Cypress tests, like timeouts, baseUrl, and viewport settings."
+How do you handle timeouts in Cypress?,"Cypress commands have default timeouts, but you can customize them using the `timeout` option in commands or in `cypress.json`."
+How do you set up environment variables in Cypress?,You can set up environment variables in Cypress using the `env` property in `cypress.json` or by passing them through the CLI.
+How do you generate reports in Cypress?,"Cypress supports multiple reporting options like JUnit, Mochawesome, and custom reporters, which can be configured via CLI or in `cypress.json`."
+What are Cypress plugins?,"Cypress plugins are custom functions that extend the behavior of the test runner, usually placed in the `plugins/index.js` file."
+How do you record Cypress tests?,You can record tests using the Cypress Dashboard service by running tests with the `cypress run --record` flag and providing a record key.
+What is the purpose of `cy.stub()`?,"`cy.stub()` is used to create a function or object in place of an existing one, often used for mocking functions."
+How do you mock network requests in Cypress?,You can mock network requests using the `cy.intercept()` command to stub the response or modify the request.
+How do you set base URL in Cypress?,You can set the base URL globally in the `cypress.json` configuration file using the `baseUrl` property.
+What is the role of the Cypress Dashboard?,"The Cypress Dashboard provides insights, analytics, and logs for test runs, helping you monitor and debug test results."
+What is the maximum time Cypress will wait for an element to appear?,"By default, Cypress will wait for 4 seconds for an element to appear, but this can be modified in the command or in the `cypress.json` configuration file."
+How do you run specific tests in Cypress?,You can run specific tests using the `it.only()` method to isolate the test during execution.
+How do you chain commands in Cypress?,Cypress uses a promise-based chaining mechanism that allows you to chain commands like `cy.get().click().type()` in sequence.
+How do you handle dropdowns in Cypress?,You can handle dropdowns by selecting options using `cy.select()` or by clicking and selecting options from a list.
+How do you upload files in Cypress?,"Cypress does not natively support file uploads, but you can use the `cypress-file-upload` plugin to simulate file uploads."
+How do you handle alerts in Cypress?,"You can handle alerts in Cypress using `cy.on('window:alert', callback)` to listen and react to alert popups."
+How do you mock geolocation in Cypress?,You can mock geolocation using the `cy.window()` command to modify the `navigator.geolocation` property.
+How do you execute a Cypress test in a Docker container?,You can run Cypress in Docker by using the official `cypress/base` image and running the tests using `cypress run` in the container.
+How do you handle iframe interactions in Cypress?,"Cypress does not have built-in support for iframe interactions, but you can use `cy.frameLoaded()` and `cy.iframe()` from plugins to handle them."

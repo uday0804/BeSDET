@@ -1,0 +1,44 @@
+﻿Question,Answer
+What is C#?,"C# is a modern, object-oriented programming language developed by Microsoft that runs on the .NET Framework."
+What is the difference between a class and a struct in C#?,"A class is a reference type, while a struct is a value type. Classes are stored on the heap, and structs are stored on the stack."
+What are access modifiers in C#?,"Access modifiers in C# are keywords used to specify the accessibility of classes, methods, and other members. Common access modifiers include public, private, protected, and internal."
+What is the difference between ref and out parameters in C#?,"Both `ref` and `out` are used to pass arguments by reference, but `ref` requires the variable to be initialized before it is passed, while `out` does not."
+What is encapsulation in C#?,"Encapsulation is an object-oriented concept that binds together the data and the functions that manipulate the data, and keeps both safe from outside interference and misuse."
+What is the difference between abstract classes and interfaces in C#?,"An abstract class can have method implementations, while an interface cannot. A class can inherit from multiple interfaces but only one abstract class."
+What is the purpose of the `using` statement in C#?,"The `using` statement is used to ensure that resources like file handles, database connections, or streams are closed or disposed of when they are no longer needed."
+What is polymorphism in C#?,"Polymorphism allows one interface to be used for a general class of actions, with specific actions determined at runtime. It allows method overriding and overloading."
+What is the difference between method overloading and method overriding?,"Method overloading allows multiple methods with the same name but different signatures, while method overriding provides a new implementation of a method inherited from a base class."
+What is a delegate in C#?,A delegate is a type that represents references to methods. Delegates are used to pass methods as arguments to other methods.
+What is an anonymous method in C#?,An anonymous method is a method without a name that can be assigned to a delegate. It is commonly used with delegates and event handlers.
+What is LINQ?,LINQ (Language Integrated Query) is a feature in C# that allows querying of collections in a consistent manner. It provides a query syntax similar to SQL.
+What is the difference between IEnumerable and IQueryable?,"IEnumerable executes queries in memory (in-memory collection), whereas IQueryable queries are translated into SQL and executed on the database server."
+What is async/await in C#?,"Async/await is a feature that allows asynchronous programming by making code non-blocking, improving responsiveness in applications."
+What is a lambda expression in C#?,"A lambda expression is a shorthand for writing anonymous methods using the `=>` syntax, and is often used in LINQ queries."
+What are generics in C#?,"Generics allow you to define classes, methods, and delegates with placeholders for types, providing type safety without the need for specific data types."
+What is the difference between the `finally` and `finalize` in C#?,"`finally` is a block that ensures code execution regardless of exceptions, while `finalize` is a method called by the garbage collector before an object is destroyed."
+What is a nullable type in C#?,"A nullable type allows a value type, such as int or bool, to hold a null value using the `?` symbol."
+What is garbage collection in C#?,Garbage collection is the process by which .NET automatically reclaims memory that is no longer being used by objects.
+What is the difference between throw and throw ex in C#?,"`throw` preserves the original stack trace, while `throw ex` resets the stack trace, making it harder to trace the source of an exception."
+What is boxing and unboxing in C#?,"Boxing is the process of converting a value type to a reference type (object), and unboxing is the reverse process."
+What is a static class in C#?,"A static class cannot be instantiated, and all its members must be static. Static classes are used to contain methods that don't require an object instance."
+What is the difference between `const` and `readonly` in C#?,"`const` is a compile-time constant, while `readonly` is a runtime constant whose value can be set only during initialization or in a constructor."
+What is dependency injection in C#?,Dependency injection is a design pattern used to achieve loose coupling by injecting dependencies into a class instead of allowing the class to create them.
+What are extension methods in C#?,Extension methods allow you to add methods to existing types without modifying their original code by using the `this` keyword in method signatures.
+What is the difference between `==` and `.Equals()` in C#?,"`==` checks for reference equality, while `.Equals()` checks for value equality (depending on how it's implemented in the class)."
+What is the purpose of the `lock` keyword in C#?,"The `lock` keyword ensures that a block of code runs only by one thread at a time, preventing race conditions in multi-threaded environments."
+What is reflection in C#?,"Reflection is the ability to inspect and interact with metadata about types at runtime, such as getting information about assemblies, modules, and types."
+What are attributes in C#?,"Attributes provide metadata about types, methods, and properties in C#. They are used to add declarative information like `Obsolete`, `Serializable`, etc."
+What is the async/await pattern used for?,"The async/await pattern is used to write asynchronous code in a more readable way, allowing the application to remain responsive while performing tasks."
+What is an indexer in C#?,An indexer allows objects to be indexed in the same way as arrays. They are defined using the `this` keyword.
+What is the difference between String and StringBuilder?,"String is immutable, meaning it cannot be changed once created. StringBuilder is mutable, allowing modification of strings without creating new instances."
+What is a delegate in C#?,A delegate is a type that represents references to methods with a specific signature. It is used for callback methods and event handling.
+What are events in C#?,Events are a messaging system in C#. They provide a way for a class to notify other classes or objects when something of interest occurs.
+What is IEnumerable in C#?,IEnumerable is an interface that allows iteration over a collection of a specified type using a `foreach` loop.
+What is an abstract class in C#?,An abstract class is a class that cannot be instantiated and is intended to be inherited by other classes. It can contain abstract methods.
+What is a sealed class in C#?,A sealed class cannot be inherited by other classes. It is used to prevent further extension of a class.
+What is multi-threading in C#?,"Multi-threading is the ability to execute multiple threads concurrently, improving application performance by doing multiple tasks in parallel."
+What is the `dynamic` keyword in C#?,"The `dynamic` keyword allows variables to bypass compile-time type checking and instead be evaluated at runtime, providing flexibility in type handling."
+What is the difference between IEnumerable and List in C#?,"IEnumerable is an interface that supports iteration over a collection, while List is a concrete class that provides specific collection operations like adding, removing, and indexing."
+What are async streams in C#?,Async streams allow processing sequences of data asynchronously using the `async` and `await foreach` keywords.
+What is a lambda expression in C#?,"A lambda expression is a concise way to represent an anonymous method using the `=>` syntax, often used with LINQ queries."
+What is the difference between throw and throw ex?,"`throw` rethrows an exception while preserving the stack trace, while `throw ex` resets the stack trace, making it harder to trace the origin of the exception."
