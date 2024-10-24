@@ -20,6 +20,11 @@
             </ul>
         </nav>
     </header>
+    <script>
+      if (window.location.protocol === 'http:') {
+        window.location.href = window.location.href.replace('http:', 'https:');
+      }
+    </script>
 
     <section>
         <h2>Welcome to Be A SDET</h2>
